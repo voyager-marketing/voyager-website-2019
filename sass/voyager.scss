@@ -1,0 +1,27 @@
+/*--------------------------------------------------------------
+# Variables - First to override third-party variables
+--------------------------------------------------------------*/
+@import './variables';
+@import './wp-core.scss';
+
+
+/*--------------------------------------------------------------
+# Third-Party SCSS
+--------------------------------------------------------------*/
+// NPM Modules
+@import "./node_modules/bootstrap/scss/bootstrap";
+
+
+/*--------------------------------------------------------------
+# Core - Theme Styles
+--------------------------------------------------------------*/
+@import "forms/forms";
+@import "layouts/layouts";
+@import "widgets";
+
+
+/*--------------------------------------------------------------
+# Components
+--------------------------------------------------------------*/
+@import "components/c-instafeed";
+@import "components/c-testimonials";
