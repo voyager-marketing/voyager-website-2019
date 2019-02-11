@@ -10,70 +10,56 @@ get_header();
 
   <!-- FRONT - Hero #14 -->
   <?php if( have_rows('slides') ): ?>
-    <div class="js-slick-carousel u-slick u-slick--equal-height"
-         data-fade="true"
-         data-infinite="true"
-         data-autoplay="true"
-         data-speed="10000"
-         data-pagi-classes="text-center u-slick__pagination u-slick__pagination--white position-absolute right-0 bottom-0 left-0 mb-4 mb-0">
+    <div id="home-hero-video" >
 
-      <?php while ( have_rows('slides') ) : the_row(); ?>
+      <!-- Background Video -->
+      <div class="slide-bg-gradient"></div>
+      <div class="bg-video position-absolute w-100 h-100">
+       <video controls autoplay>
+        <source type="video/mp4" src="<?php echo get_template_directory_uri() ?>/images/social-media.mp4">
+        </video>
+      </div>
+      <div class="js-slick-carousel u-slick u-slick--equal-height"
+           data-fade="true"
+           data-infinite="true"
+           data-autoplay="true"
+           data-speed="10000"
+           data-pagi-classes="text-center u-slick__pagination u-slick__pagination--white position-absolute right-0 bottom-0 left-0 mb-4 mb-0">
 
-        <div class="js-slide gradient-overlay-half-primary-v1 bg-img-hero space-3 min-height-lg-100vh" style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/img/1920x800/img7.jpg);">
-            <!-- Hero News -->
-            <div class="container d-lg-flex align-items-lg-center">
-              <article class="js-scroll-effect position-relative w-lg-60 text-center mx-lg-auto"
-                       data-scroll-effect="smoothFadeToBottom"
-                       data-scroll-effect-speed="500">
-                <!-- Share Social Networks -->
-                <div data-scs-animation-in="fadeInUp">
-                  <ul class="list-inline mb-4">
-                    <li class="list-inline-item">
-                      <a class="btn btn-sm btn-icon btn-soft-light btn-bg-transparent rounded-circle" href="#">
-                        <span class="fab fa-facebook-f btn-icon__inner"></span>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a class="btn btn-sm btn-icon btn-soft-light btn-bg-transparent rounded-circle" href="#">
-                        <span class="fab fa-google btn-icon__inner"></span>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a class="btn btn-sm btn-icon btn-soft-light btn-bg-transparent rounded-circle" href="#">
-                        <span class="fab fa-twitter btn-icon__inner"></span>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a class="btn btn-sm btn-icon btn-soft-light btn-bg-transparent rounded-circle" href="#">
-                        <span class="fab fa-github btn-icon__inner"></span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-                <!-- End Share Social Networks -->
 
-                <!-- Info -->
-                <div class="mb-4">
-                  <h1 class="text-white font-weight-semi-bold mb-3"
-                      data-scs-animation-in="fadeInUp"><?php the_sub_field('title'); ?></h1>
-                  <p class="text-white-70 mb-7"
-                     data-scs-animation-in="fadeInUp"><?php the_sub_field('text'); ?></p>
-                </div>
-                <a class="btn text-primary btn-white btn-pill btn-wide transition-3d-hover" href="../blog/single-article-classic.html"
-                   data-scs-animation-in="fadeInUp"><?php the_sub_field('button_text'); ?></a>
-                <!-- End Info -->
-              </article>
-            </div>
-            <!-- End Hero News -->
-        </div>
+        <?php while ( have_rows('slides') ) : the_row(); ?>
 
-      <?php endwhile; ?>
+          <div class="js-slide gradient-overlay-half-primary-v1 bg-img-hero space-3 min-height-lg-100vh"><!-- style="background-image: url(<?php echo get_template_directory_uri() ?>/assets/img/1920x800/img7.jpg);" -->
+
+
+              <!-- Hero News -->
+              <div class="hero-news-slide container d-lg-flex align-items-lg-center">
+                <article class="js-scroll-effect position-relative w-lg-60 text-center mx-lg-auto"
+                         data-scroll-effect="smoothFadeToBottom"
+                         data-scroll-effect-speed="500">
+                  <!-- Info -->
+                  <div class="mb-4">
+                    <h1 class="text-white font-weight-semi-bold mb-3"
+                        data-scs-animation-in="fadeInUp"><?php the_sub_field('title'); ?></h1>
+                    <p class="text-white-70 mb-7"
+                       data-scs-animation-in="fadeInUp"><?php the_sub_field('text'); ?></p>
+                  </div>
+                  <a class="btn text-primary btn-white btn-pill btn-wide transition-3d-hover" href="../blog/single-article-classic.html"
+                     data-scs-animation-in="fadeInUp"><?php the_sub_field('button_text'); ?></a>
+                  <!-- End Info -->
+                </article>
+              </div>
+              <!-- End Hero News -->
+          </div>
+
+        <?php endwhile; ?>
+      </div>
     </div>
   <?php endif;?>
   <!-- End Hero #14 Section -->
 
 <!-- Hero Section -->
-<div class="container space-2 space-top-md-5 space-bottom-md-3 space-top-lg-4">
+<div class="container space-3">
   <div class="row justify-content-lg-between align-items-lg-center">
     <div class="col-lg-5 mb-4">
       <!-- Title -->
@@ -89,7 +75,7 @@ get_header();
       <!-- SVG Icon -->
       <div id="SVGeasyStart" class="svg-preloader d-none d-lg-block">
         <figure class="ie-subscribe-2">
-          <img class="js-svg-injector" src="<?php echo get_template_directory_uri() ?>/assets/svg/flat-icons/easy-start.svg" alt="Image Description"
+          <img class="js-svg-injector" src="<?php echo get_template_directory_uri() ?>/images/1.png" alt="Image Description"
                data-parent="#SVGeasyStart">
         </figure>
       </div>

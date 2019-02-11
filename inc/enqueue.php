@@ -4,7 +4,7 @@
  */
 function voyager_starter_scripts() {
 	wp_enqueue_style( 'voyager-starter-intro', get_stylesheet_uri() );
-	// wp_enqueue_style( 'voyager-starter-style', get_template_directory_uri() . '/css/voyager.min.css' );
+	wp_enqueue_style( 'voyager-starter-style', get_template_directory_uri() . '/css/voyager.min.css' );
 	// wp_enqueue_style( 'flickity-style', 'https://unpkg.com/flickity@2.1.2/dist/flickity.css', null, null);
 
 	// wp_enqueue_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js', array(), '1.14.6', true );
